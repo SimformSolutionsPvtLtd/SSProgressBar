@@ -127,7 +127,7 @@ class ULProgressBar: UIView {
                 case .trackBGColor:
                     self.backgroundColor = self.trackBackgroundColor
                 case .progressWidth:
-                    UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                    UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
                         layer?.frame.size.width = CGFloat(self.progressWidth)
                     }) { (isDone) in
                         
