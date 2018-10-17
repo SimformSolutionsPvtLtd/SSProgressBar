@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SSProgressBar"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "SSProgressBar: highly customizable progressbar "
 
   s.description  = <<-DESC

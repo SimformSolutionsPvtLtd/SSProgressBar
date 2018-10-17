@@ -9,15 +9,15 @@
 import UIKit
 
 @IBDesignable
-class ULProgressBar: UIView {
+open class SSProgressBar: UIView {
     
-    enum GradientDirection {
+    public enum GradientDirection {
         case leftToRight
         case rightToLeft
         case topToBottom
         case bottomToTop
     }
-    enum Parameters {
+    public enum Parameters {
         case shadowColor
         case cornerRadius
         case shadowOffset
@@ -31,13 +31,13 @@ class ULProgressBar: UIView {
     }
     
     private var progressView = UIView()
-    var gradientDirection: GradientDirection = .topToBottom {
+    public var gradientDirection: GradientDirection = .topToBottom {
         didSet {
             self.updateView(params: .gradientDirection)
         }
     }
     
-    var colors: [CGColor] = [] {
+    public var colors: [CGColor] = [] {
         didSet {
             if colors.count > 0 {
                 self.updateView(params: .gradientColor)
@@ -45,7 +45,7 @@ class ULProgressBar: UIView {
         }
     }
     
-    @IBInspectable var progress: Int = 10 {
+    @IBInspectable public var progress: Int = 10 {
         didSet {
             print(progress)
             progressWidth = Int(self.frame.width * CGFloat(min(progress, 100)) / 100)
@@ -62,43 +62,43 @@ class ULProgressBar: UIView {
         }
     }
     
-    @IBInspectable  var trackBackgroundColor: UIColor = UIColor.white {
+    @IBInspectable public var trackBackgroundColor: UIColor = UIColor.white {
         didSet {
             self.updateView(params: .cornerRadius)
         }
     }
     
-    @IBInspectable  var cornerRadius: CGFloat = 0.0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0.0 {
         didSet {
             self.updateView(params: .cornerRadius)
         }
     }
     
-    @IBInspectable  var borderWidth: CGFloat = 0 {
+    @IBInspectable public  var borderWidth: CGFloat = 0 {
         didSet {
             self.updateView(params: .borderWidth)
         }
     }
     
-    @IBInspectable  var borderColor: UIColor? = UIColor.clear {
+    @IBInspectable public var borderColor: UIColor? = UIColor.clear {
         didSet {
             self.updateView(params: .borderColor)
         }
     }
     
-    @IBInspectable  var shadowColor: UIColor? = UIColor.clear {
+    @IBInspectable public var shadowColor: UIColor? = UIColor.clear {
         didSet {
             self.updateView(params: .shadowColor)
         }
     }
     
-    @IBInspectable  var shadowOffset: CGSize = CGSize(width: 0, height: 0) {
+    @IBInspectable public var shadowOffset: CGSize = CGSize(width: 0, height: 0) {
         didSet {
             self.updateView(params: .shadowOffset)
         }
     }
     
-    @IBInspectable  var shadowOpacity: Double = 0 {
+    @IBInspectable public var shadowOpacity: Double = 0 {
         didSet {
             self.updateView(params: .shadowOpacity)
         }
@@ -157,7 +157,7 @@ class ULProgressBar: UIView {
         }
     }
     
-    func withProgressGradientBackground(from color1: UIColor, to color2: UIColor, direction: GradientDirection) {
+    public func withProgressGradientBackground(from color1: UIColor, to color2: UIColor, direction: GradientDirection) {
         if self.progressView.layer.sublayers != nil {
             if self.progressView.layer.sublayers![0].isKind(of: CAGradientLayer.self) {
                 let layer = self.progressView.layer.sublayers![0] as? CAGradientLayer
@@ -193,7 +193,7 @@ class ULProgressBar: UIView {
         self.backgroundColor = self.trackBackgroundColor
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
     }
