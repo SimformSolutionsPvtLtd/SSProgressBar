@@ -12,7 +12,7 @@
 		8F4DCAF82177257E00ED5606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4DCAF62177257E00ED5606 /* Main.storyboard */; };
 		8F4DCAFA2177257F00ED5606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F4DCAF92177257F00ED5606 /* Assets.xcassets */; };
 		8F4DCAFD2177257F00ED5606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4DCAFB2177257F00ED5606 /* LaunchScreen.storyboard */; };
-		8F4DCB0621772FAB00ED5606 /* ULProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DCB0521772FAB00ED5606 /* ULProgressBar.swift */; };
+		DED0FB3921D1F62C00051022 /* SSProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED0FB3821D1F62C00051022 /* SSProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		8F4DCAF92177257F00ED5606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F4DCAFC2177257F00ED5606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F4DCAFE2177257F00ED5606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F4DCB0521772FAB00ED5606 /* ULProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ULProgressBar.swift; path = ../../../SSProgressBar/ULProgressBar.swift; sourceTree = "<group>"; };
+		DED0FB3821D1F62C00051022 /* SSProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		8F4DCAF12177257E00ED5606 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				8F4DCB0421772F9000ED5606 /* SSProgressBar */,
+				DED0FB3721D1F62C00051022 /* SSProgressBar */,
 				8F4DCAF22177257E00ED5606 /* AppDelegate.swift */,
 				8F4DCAF42177257E00ED5606 /* ViewController.swift */,
 				8F4DCAF62177257E00ED5606 /* Main.storyboard */,
@@ -67,12 +67,13 @@
 			path = DemoApp;
 			sourceTree = "<group>";
 		};
-		8F4DCB0421772F9000ED5606 /* SSProgressBar */ = {
+		DED0FB3721D1F62C00051022 /* SSProgressBar */ = {
 			isa = PBXGroup;
 			children = (
-				8F4DCB0521772FAB00ED5606 /* ULProgressBar.swift */,
+				DED0FB3821D1F62C00051022 /* SSProgressBar.swift */,
 			);
 			name = SSProgressBar;
+			path = ../../../SSProgressBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F4DCAF52177257E00ED5606 /* ViewController.swift in Sources */,
-				8F4DCB0621772FAB00ED5606 /* ULProgressBar.swift in Sources */,
+				DED0FB3921D1F62C00051022 /* SSProgressBar.swift in Sources */,
 				8F4DCAF32177257E00ED5606 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

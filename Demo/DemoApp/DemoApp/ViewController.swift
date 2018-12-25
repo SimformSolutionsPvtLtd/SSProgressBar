@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var viewProgres: ULProgressBar!
+    @IBOutlet var viewProgres: SSProgressBar!
     
     @IBOutlet var prgView: UIProgressView!
     override func viewDidLoad() {

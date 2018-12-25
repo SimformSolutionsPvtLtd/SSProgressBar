@@ -129,6 +129,9 @@ open class SSProgressBar: UIView {
                 case .progressWidth:
                     UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
                         layer?.frame.size.width = CGFloat(self.progressWidth)
+                        guard let layer = layer else { return }
+                        let shadowBezier = UIBezierPath(roundedRect: layer.frame, cornerRadius: self.cornerRadius)
+                        layer.shadowPath = shadowBezier.cgPath
                     }) { (isDone) in
                         
                     }
@@ -174,6 +177,8 @@ open class SSProgressBar: UIView {
         gradient.frame = self.progressView.bounds
         gradient.colors = [color1.cgColor, color2.cgColor]
         gradient.cornerRadius = self.cornerRadius
+        let shadowBezier = UIBezierPath(roundedRect: gradient.frame, cornerRadius: cornerRadius)
+        gradient.shadowPath = shadowBezier.cgPath
         gradient.shadowColor = self.shadowColor?.cgColor
         gradient.shadowOffset = self.shadowOffset
         gradient.shadowOpacity = Float(self.shadowOpacity)
